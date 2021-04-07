@@ -13,13 +13,24 @@ namespace TbClct.Tools.GetFN
 {
     public partial class SubForm : BaseForm.ToolForm
     {
+        GetFN m_getFN = new GetFN();        // 获取文件名 相关类
+
         public SubForm()
         {
             InitializeComponent();
 
             // Component Initialization
-            comboBoxFN.SelectedIndex   = 0;                     // 完整路径
-            comboBoxSort.SelectedIndex = 0;                     // 时间升序
+            comboBoxFormat.SelectedIndexChanged -= new System.EventHandler(comboBoxFormat_SelectedIndexChanged);
+            comboBoxSorted.SelectedIndexChanged -= new System.EventHandler(comboBoxSorted_SelectedIndexChanged);
+
+            comboBoxFormat.Items.AddRange(m_getFN.m_FORMAT);        // 输出格式
+            comboBoxFormat.SelectedIndex = 0;                     
+
+            comboBoxSorted.Items.AddRange(m_getFN.m_SORTED);        // 输出排序
+            comboBoxSorted.SelectedIndex = 0;                     
+
+            comboBoxFormat.SelectedIndexChanged += new System.EventHandler(comboBoxFormat_SelectedIndexChanged);
+            comboBoxSorted.SelectedIndexChanged += new System.EventHandler(comboBoxSorted_SelectedIndexChanged);
         }
 
         // ------------------------------------ Events ------------------------------------ //
@@ -55,7 +66,23 @@ namespace TbClct.Tools.GetFN
         {
             try
             {
-                
+                // Get fullname and extension
+                m_getFN.Update(textBoxUrl.Text, out string err);
+                if (!string.IsNullOrWhiteSpace(err))
+                {
+                    MessageBox.Show(err);
+                    return;
+                }
+
+                // Update Suffix
+                checkedListBoxSuffix.Items.Clear();
+                foreach (string ext in m_getFN.m_extList)
+                {
+                    checkedListBoxSuffix.Items.Add(ext);
+                }
+
+                // Update SelectAll
+                checkBoxSelectAll_CheckedChanged(null, null);
             }
             catch (Exception ex)
             {
@@ -72,6 +99,9 @@ namespace TbClct.Tools.GetFN
         {
             try
             {
+                // 禁止 文件后缀选择事件
+                checkedListBoxSuffix.SelectedIndexChanged -= new System.EventHandler(checkedListBoxSuffix_SelectedIndexChanged);
+
                 // 设置 文件后缀 选中项目
                 if (checkBoxSelectAll.Checked)
                 {
@@ -87,6 +117,10 @@ namespace TbClct.Tools.GetFN
                         checkedListBoxSuffix.SetItemChecked(i, false);
                     }
                 }
+
+                // 启动并调用 文件后缀选择事件
+                checkedListBoxSuffix.SelectedIndexChanged += new System.EventHandler(checkedListBoxSuffix_SelectedIndexChanged);
+                checkedListBoxSuffix_SelectedIndexChanged(null, null);
             }
             catch (Exception ex)
             {
@@ -103,7 +137,8 @@ namespace TbClct.Tools.GetFN
         {
             try
             {
-
+                textBoxFN.Text = m_getFN.Output(checkedListBoxSuffix.CheckedItems, comboBoxFormat.SelectedItem.ToString(), 
+                                                comboBoxSorted.SelectedItem.ToString(), checkBoxIsIndex.Checked);
             }
             catch (Exception ex)
             {
@@ -116,11 +151,12 @@ namespace TbClct.Tools.GetFN
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void comboBoxFN_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxFormat_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-
+                textBoxFN.Text = m_getFN.Output(checkedListBoxSuffix.CheckedItems, comboBoxFormat.SelectedItem.ToString(), 
+                                                comboBoxSorted.SelectedItem.ToString(), checkBoxIsIndex.Checked);
             }
             catch (Exception ex)
             {
@@ -133,11 +169,30 @@ namespace TbClct.Tools.GetFN
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void comboBoxSort_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxSorted_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
+                textBoxFN.Text = m_getFN.Output(checkedListBoxSuffix.CheckedItems, comboBoxFormat.SelectedItem.ToString(), 
+                                                comboBoxSorted.SelectedItem.ToString(), checkBoxIsIndex.Checked);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        /// <summary>
+        /// 是否 添加编号
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void checkBoxIsIndex_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                textBoxFN.Text = m_getFN.Output(checkedListBoxSuffix.CheckedItems, comboBoxFormat.SelectedItem.ToString(), 
+                                                comboBoxSorted.SelectedItem.ToString(), checkBoxIsIndex.Checked);
             }
             catch (Exception ex)
             {
@@ -178,5 +233,6 @@ namespace TbClct.Tools.GetFN
                 MessageBox.Show(ex.Message);
             }
         }
+
     }
 }

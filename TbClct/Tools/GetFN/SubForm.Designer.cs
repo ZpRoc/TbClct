@@ -34,11 +34,11 @@
             this.checkedListBoxSuffix = new System.Windows.Forms.CheckedListBox();
             this.textBoxFN = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.comboBoxFN = new System.Windows.Forms.ComboBox();
-            this.comboBoxSort = new System.Windows.Forms.ComboBox();
+            this.comboBoxFormat = new System.Windows.Forms.ComboBox();
+            this.comboBoxSorted = new System.Windows.Forms.ComboBox();
             this.buttonExport = new System.Windows.Forms.Button();
             this.checkBoxSelectAll = new System.Windows.Forms.CheckBox();
-            this.buttonTmp = new System.Windows.Forms.Button();
+            this.checkBoxIsIndex = new System.Windows.Forms.CheckBox();
             this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,10 +49,10 @@
             // 
             // panelMain
             // 
-            this.panelMain.Controls.Add(this.buttonTmp);
+            this.panelMain.Controls.Add(this.checkBoxIsIndex);
             this.panelMain.Controls.Add(this.buttonExport);
-            this.panelMain.Controls.Add(this.comboBoxSort);
-            this.panelMain.Controls.Add(this.comboBoxFN);
+            this.panelMain.Controls.Add(this.comboBoxSorted);
+            this.panelMain.Controls.Add(this.comboBoxFormat);
             this.panelMain.Controls.Add(this.checkBoxSelectAll);
             this.panelMain.Controls.Add(this.textBoxFN);
             this.panelMain.Controls.Add(this.checkedListBoxSuffix);
@@ -106,18 +106,18 @@
             this.checkedListBoxSuffix.FormattingEnabled = true;
             this.checkedListBoxSuffix.Location = new System.Drawing.Point(8, 78);
             this.checkedListBoxSuffix.Name = "checkedListBoxSuffix";
-            this.checkedListBoxSuffix.Size = new System.Drawing.Size(80, 172);
+            this.checkedListBoxSuffix.Size = new System.Drawing.Size(100, 172);
             this.checkedListBoxSuffix.TabIndex = 113;
             this.checkedListBoxSuffix.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxSuffix_SelectedIndexChanged);
             // 
             // textBoxFN
             // 
-            this.textBoxFN.Location = new System.Drawing.Point(96, 78);
+            this.textBoxFN.Location = new System.Drawing.Point(116, 78);
             this.textBoxFN.Multiline = true;
             this.textBoxFN.Name = "textBoxFN";
             this.textBoxFN.ReadOnly = true;
             this.textBoxFN.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxFN.Size = new System.Drawing.Size(456, 172);
+            this.textBoxFN.Size = new System.Drawing.Size(436, 172);
             this.textBoxFN.TabIndex = 114;
             this.textBoxFN.WordWrap = false;
             // 
@@ -126,41 +126,30 @@
             this.folderBrowserDialog.Description = "选择文件夹";
             this.folderBrowserDialog.ShowNewFolderButton = false;
             // 
-            // comboBoxFN
+            // comboBoxFormat
             // 
-            this.comboBoxFN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxFN.FormattingEnabled = true;
-            this.comboBoxFN.Items.AddRange(new object[] {
-            "完整路径",
-            "文件名(有后缀)",
-            "文件名(无后缀)"});
-            this.comboBoxFN.Location = new System.Drawing.Point(96, 44);
-            this.comboBoxFN.Name = "comboBoxFN";
-            this.comboBoxFN.Size = new System.Drawing.Size(150, 29);
-            this.comboBoxFN.TabIndex = 116;
-            this.comboBoxFN.SelectedIndexChanged += new System.EventHandler(this.comboBoxFN_SelectedIndexChanged);
+            this.comboBoxFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFormat.FormattingEnabled = true;
+            this.comboBoxFormat.Location = new System.Drawing.Point(116, 44);
+            this.comboBoxFormat.Name = "comboBoxFormat";
+            this.comboBoxFormat.Size = new System.Drawing.Size(100, 29);
+            this.comboBoxFormat.TabIndex = 116;
+            this.comboBoxFormat.SelectedIndexChanged += new System.EventHandler(this.comboBoxFormat_SelectedIndexChanged);
             // 
-            // comboBoxSort
+            // comboBoxSorted
             // 
-            this.comboBoxSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSort.FormattingEnabled = true;
-            this.comboBoxSort.Items.AddRange(new object[] {
-            "时间升序",
-            "时间降序",
-            "名称升序",
-            "名称降序",
-            "类型升序",
-            "类型降序"});
-            this.comboBoxSort.Location = new System.Drawing.Point(261, 44);
-            this.comboBoxSort.Name = "comboBoxSort";
-            this.comboBoxSort.Size = new System.Drawing.Size(100, 29);
-            this.comboBoxSort.TabIndex = 117;
-            this.comboBoxSort.SelectedIndexChanged += new System.EventHandler(this.comboBoxSort_SelectedIndexChanged);
+            this.comboBoxSorted.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSorted.FormattingEnabled = true;
+            this.comboBoxSorted.Location = new System.Drawing.Point(234, 44);
+            this.comboBoxSorted.Name = "comboBoxSorted";
+            this.comboBoxSorted.Size = new System.Drawing.Size(100, 29);
+            this.comboBoxSorted.TabIndex = 117;
+            this.comboBoxSorted.SelectedIndexChanged += new System.EventHandler(this.comboBoxSorted_SelectedIndexChanged);
             // 
             // buttonExport
             // 
             this.buttonExport.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonExport.Location = new System.Drawing.Point(378, 43);
+            this.buttonExport.Location = new System.Drawing.Point(472, 43);
             this.buttonExport.Name = "buttonExport";
             this.buttonExport.Size = new System.Drawing.Size(80, 30);
             this.buttonExport.TabIndex = 118;
@@ -179,16 +168,16 @@
             this.checkBoxSelectAll.UseVisualStyleBackColor = true;
             this.checkBoxSelectAll.CheckedChanged += new System.EventHandler(this.checkBoxSelectAll_CheckedChanged);
             // 
-            // buttonTmp
+            // checkBoxIsIndex
             // 
-            this.buttonTmp.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonTmp.Location = new System.Drawing.Point(472, 43);
-            this.buttonTmp.Name = "buttonTmp";
-            this.buttonTmp.Size = new System.Drawing.Size(80, 30);
-            this.buttonTmp.TabIndex = 119;
-            this.buttonTmp.Text = "测试";
-            this.buttonTmp.UseVisualStyleBackColor = true;
-            this.buttonTmp.Click += new System.EventHandler(this.buttonTmp_Click);
+            this.checkBoxIsIndex.AutoSize = true;
+            this.checkBoxIsIndex.Location = new System.Drawing.Point(358, 46);
+            this.checkBoxIsIndex.Name = "checkBoxIsIndex";
+            this.checkBoxIsIndex.Size = new System.Drawing.Size(101, 25);
+            this.checkBoxIsIndex.TabIndex = 119;
+            this.checkBoxIsIndex.Text = "添加编号";
+            this.checkBoxIsIndex.UseVisualStyleBackColor = true;
+            this.checkBoxIsIndex.CheckedChanged += new System.EventHandler(this.checkBoxIsIndex_CheckedChanged);
             // 
             // SubForm
             // 
@@ -211,10 +200,10 @@
         private System.Windows.Forms.TextBox textBoxFN;
         private System.Windows.Forms.CheckedListBox checkedListBoxSuffix;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
-        private System.Windows.Forms.ComboBox comboBoxSort;
-        private System.Windows.Forms.ComboBox comboBoxFN;
+        private System.Windows.Forms.ComboBox comboBoxSorted;
+        private System.Windows.Forms.ComboBox comboBoxFormat;
         private System.Windows.Forms.Button buttonExport;
         private System.Windows.Forms.CheckBox checkBoxSelectAll;
-        private System.Windows.Forms.Button buttonTmp;
+        private System.Windows.Forms.CheckBox checkBoxIsIndex;
     }
 }
