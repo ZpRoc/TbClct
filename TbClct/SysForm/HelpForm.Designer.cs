@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpForm));
-            this.buttonCancel = new System.Windows.Forms.Button();
-            this.buttonOK = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
             this.tabControlHelp = new System.Windows.Forms.TabControl();
             this.tabPageTools = new System.Windows.Forms.TabPage();
@@ -44,25 +42,11 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonCancel.Location = new System.Drawing.Point(316, 536);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(100, 33);
-            this.buttonCancel.TabIndex = 108;
-            this.buttonCancel.Text = "取消";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.buttonCancel.Location = new System.Drawing.Point(315, 528);
             // 
             // buttonOK
             // 
-            this.buttonOK.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonOK.Location = new System.Drawing.Point(200, 536);
-            this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(100, 33);
-            this.buttonOK.TabIndex = 107;
-            this.buttonOK.Text = "确定";
-            this.buttonOK.UseVisualStyleBackColor = true;
-            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
+            this.buttonOK.Location = new System.Drawing.Point(199, 528);
             // 
             // labelTitle
             // 
@@ -83,7 +67,7 @@
             this.tabControlHelp.Location = new System.Drawing.Point(12, 56);
             this.tabControlHelp.Name = "tabControlHelp";
             this.tabControlHelp.SelectedIndex = 0;
-            this.tabControlHelp.Size = new System.Drawing.Size(408, 470);
+            this.tabControlHelp.Size = new System.Drawing.Size(408, 460);
             this.tabControlHelp.TabIndex = 110;
             // 
             // tabPageTools
@@ -93,7 +77,7 @@
             this.tabPageTools.Location = new System.Drawing.Point(4, 34);
             this.tabPageTools.Name = "tabPageTools";
             this.tabPageTools.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTools.Size = new System.Drawing.Size(400, 432);
+            this.tabPageTools.Size = new System.Drawing.Size(400, 422);
             this.tabPageTools.TabIndex = 0;
             this.tabPageTools.Text = "  工具  ";
             this.tabPageTools.UseVisualStyleBackColor = true;
@@ -105,7 +89,7 @@
             this.textBoxTools.Multiline = true;
             this.textBoxTools.Name = "textBoxTools";
             this.textBoxTools.ReadOnly = true;
-            this.textBoxTools.Size = new System.Drawing.Size(394, 426);
+            this.textBoxTools.Size = new System.Drawing.Size(394, 416);
             this.textBoxTools.TabIndex = 0;
             // 
             // tabPageActivate
@@ -138,14 +122,14 @@
             this.ClientSize = new System.Drawing.Size(432, 581);
             this.Controls.Add(this.tabControlHelp);
             this.Controls.Add(this.labelTitle);
-            this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.buttonOK);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.KeyPreview = true;
             this.Name = "HelpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "帮助";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpForm_KeyDown);
+            this.Controls.SetChildIndex(this.labelTitle, 0);
+            this.Controls.SetChildIndex(this.tabControlHelp, 0);
+            this.Controls.SetChildIndex(this.buttonOK, 0);
+            this.Controls.SetChildIndex(this.buttonCancel, 0);
             this.tabControlHelp.ResumeLayout(false);
             this.tabPageTools.ResumeLayout(false);
             this.tabPageTools.PerformLayout();
@@ -158,8 +142,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.TabControl tabControlHelp;
         private System.Windows.Forms.TabPage tabPageTools;

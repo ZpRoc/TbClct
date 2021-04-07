@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TbClct.SysForm
 {
-    public partial class InputForm : BaseForm.BaseForm
+    public partial class InputForm : BaseForm.OkCancelForm
     {
         public InputForm()
         {

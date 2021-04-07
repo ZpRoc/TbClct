@@ -19,7 +19,7 @@ namespace TbClct.BaseForm
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonOK_Click(object sender, EventArgs e)
+        protected virtual void buttonOK_Click(object sender, EventArgs e)
         {
             try
             {
@@ -38,7 +38,7 @@ namespace TbClct.BaseForm
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonCancel_Click(object sender, EventArgs e)
+        protected virtual void buttonCancel_Click(object sender, EventArgs e)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace TbClct.BaseForm
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OkCancelForm_KeyDown(object sender, KeyEventArgs e)
+        protected virtual void OkCancelForm_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {

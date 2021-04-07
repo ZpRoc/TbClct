@@ -39,12 +39,18 @@
             this.labelAlipay = new System.Windows.Forms.Label();
             this.pictureBoxAlipay = new System.Windows.Forms.PictureBox();
             this.labelEmail = new System.Windows.Forms.Label();
-            this.buttonCancel = new System.Windows.Forms.Button();
-            this.buttonOK = new System.Windows.Forms.Button();
             this.groupBoxAbout.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlipay)).BeginInit();
             this.SuspendLayout();
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(182, 558);
+            // 
+            // buttonOK
+            // 
+            this.buttonOK.Location = new System.Drawing.Point(66, 558);
             // 
             // labelTitle
             // 
@@ -167,50 +173,27 @@
             this.labelEmail.Text = "Email: pengzheng@188.com";
             this.labelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonCancel.Location = new System.Drawing.Point(186, 552);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(100, 33);
-            this.buttonCancel.TabIndex = 106;
-            this.buttonCancel.Text = "取消";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
-            // buttonOK
-            // 
-            this.buttonOK.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonOK.Location = new System.Drawing.Point(70, 552);
-            this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(100, 33);
-            this.buttonOK.TabIndex = 105;
-            this.buttonOK.Text = "确定";
-            this.buttonOK.UseVisualStyleBackColor = true;
-            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
-            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 597);
-            this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.buttonOK);
+            this.ClientSize = new System.Drawing.Size(299, 611);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxAbout);
             this.Controls.Add(this.labelTitle);
-            this.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 12F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(315, 636);
+            this.MaximumSize = new System.Drawing.Size(315, 650);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(315, 636);
+            this.MinimumSize = new System.Drawing.Size(315, 650);
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "关于";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AboutForm_KeyDown);
+            this.Controls.SetChildIndex(this.labelTitle, 0);
+            this.Controls.SetChildIndex(this.groupBoxAbout, 0);
+            this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.buttonOK, 0);
+            this.Controls.SetChildIndex(this.buttonCancel, 0);
             this.groupBoxAbout.ResumeLayout(false);
             this.groupBoxAbout.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -230,8 +213,6 @@
         private System.Windows.Forms.Label labelVersion;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Label labelAuthor;
-        private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Label labelAlipay;
         private System.Windows.Forms.PictureBox pictureBoxAlipay;
         private System.Windows.Forms.Label labelEmail;

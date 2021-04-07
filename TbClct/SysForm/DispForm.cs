@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TbClct.SysForm
 {
-    public partial class DispForm : BaseForm.BaseForm
+    public partial class DispForm : BaseForm.OkCancelForm
     {
         public DispForm()
         {
