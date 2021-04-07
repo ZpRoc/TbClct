@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TbClct
+namespace TbClct.BaseForm
 {
-    public partial class Form1 : Form
+    public partial class InputForm : BaseForm
     {
-        public Form1()
+        public InputForm()
         {
             InitializeComponent();
         }
