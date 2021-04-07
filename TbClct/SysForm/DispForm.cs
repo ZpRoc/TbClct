@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TbClct.BaseForm
+namespace TbClct.SysForm
 {
-    public partial class DispForm : BaseForm
+    public partial class DispForm : BaseForm.BaseForm
     {
         public DispForm()
         {

@@ -1,6 +1,6 @@
-﻿namespace TbClct.BaseForm
+﻿namespace TbClct.SysForm
 {
-    partial class DispForm
+    partial class InputForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // DispSubForm
+            // InputSubForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
-            this.Name = "DispSubForm";
-            this.Text = "DispSubForm";
+            this.Name = "InputSubForm";
+            this.Text = "InputSubForm";
             this.ResumeLayout(false);
 
         }

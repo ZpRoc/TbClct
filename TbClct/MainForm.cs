@@ -102,7 +102,7 @@ namespace TbClct
             try
             {
                 // 弹出命令配置窗口
-                BaseForm.HelpForm helpForm = new BaseForm.HelpForm();
+                SysForm.HelpForm helpForm = new SysForm.HelpForm();
                 if (helpForm.ShowDialog(this) == DialogResult.OK)
                 {
                     
@@ -135,7 +135,7 @@ namespace TbClct
                 }
 
                 // 弹出命令配置窗口
-                BaseForm.AboutForm aboutForm = new BaseForm.AboutForm(m_dateVersion, m_pushVersion, authority);
+                SysForm.AboutForm aboutForm = new SysForm.AboutForm(m_dateVersion, m_pushVersion, authority);
                 if (aboutForm.ShowDialog(this) == DialogResult.OK)
                 {
                     

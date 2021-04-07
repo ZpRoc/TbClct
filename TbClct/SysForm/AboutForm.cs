@@ -2,9 +2,9 @@
 using System.Windows.Forms;
 
 
-namespace TbClct.BaseForm
+namespace TbClct.SysForm
 {
-    public partial class AboutForm : BaseForm
+    public partial class AboutForm : BaseForm.BaseForm
     {
         public AboutForm()
         {

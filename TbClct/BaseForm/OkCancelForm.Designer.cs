@@ -1,6 +1,6 @@
 ﻿namespace TbClct.BaseForm
 {
-    partial class InputForm
+    partial class OkCancelForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // InputSubForm
+            // OkCancelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
-            this.Name = "InputSubForm";
-            this.Text = "InputSubForm";
+            this.Name = "OkCancelForm";
+            this.Text = "OkCancelForm";
             this.ResumeLayout(false);
 
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TbClct.BaseForm
 {
-    public partial class InputForm : BaseForm
+    public partial class OkCancelForm : BaseForm
     {
-        public InputForm()
+        public OkCancelForm()
         {
             InitializeComponent();
         }

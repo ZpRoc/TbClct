@@ -56,10 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseForm\AboutForm.cs">
+    <Compile Include="BaseForm\OkCancelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseForm\AboutForm.Designer.cs">
+    <Compile Include="BaseForm\OkCancelForm.Designer.cs">
+      <DependentUpon>OkCancelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseForm\BaseForm.cs">
@@ -68,22 +74,22 @@
     <Compile Include="BaseForm\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseForm\DispForm.cs">
+    <Compile Include="SysForm\DispForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseForm\DispForm.Designer.cs">
+    <Compile Include="SysForm\DispForm.Designer.cs">
       <DependentUpon>DispForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseForm\HelpForm.cs">
+    <Compile Include="SysForm\HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseForm\HelpForm.Designer.cs">
+    <Compile Include="SysForm\HelpForm.Designer.cs">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseForm\InputForm.cs">
+    <Compile Include="SysForm\InputForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseForm\InputForm.Designer.cs">
+    <Compile Include="SysForm\InputForm.Designer.cs">
       <DependentUpon>InputForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -94,19 +100,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BaseForm\AboutForm.resx">
+    <EmbeddedResource Include="BaseForm\OkCancelForm.resx">
+      <DependentUpon>OkCancelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaseForm\DispForm.resx">
+    <EmbeddedResource Include="SysForm\DispForm.resx">
       <DependentUpon>DispForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaseForm\HelpForm.resx">
+    <EmbeddedResource Include="SysForm\HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaseForm\InputForm.resx">
+    <EmbeddedResource Include="SysForm\InputForm.resx">
       <DependentUpon>InputForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -145,6 +154,7 @@
     <Content Include="ico\ZpRoc.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ToolForm\" />
     <Folder Include="Tools\GetFilenames\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

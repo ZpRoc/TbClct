@@ -1,4 +1,4 @@
-﻿namespace TbClct.BaseForm
+﻿namespace TbClct.SysForm
 {
     partial class HelpForm
     {
