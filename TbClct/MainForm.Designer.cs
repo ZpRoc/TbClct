@@ -45,9 +45,10 @@
             this.toolStripProgressBarMain = new System.Windows.Forms.ToolStripProgressBar();
             this.timerMain = new System.Windows.Forms.Timer(this.components);
             this.buttonGetFN = new System.Windows.Forms.Button();
-            this.buttonRenameFN = new System.Windows.Forms.Button();
+            this.groupBoxFN = new System.Windows.Forms.GroupBox();
             this.menuStripMain.SuspendLayout();
             this.statusStripMain.SuspendLayout();
+            this.groupBoxFN.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripMain
@@ -170,35 +171,35 @@
             // 
             // buttonGetFN
             // 
-            this.buttonGetFN.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonGetFN.Location = new System.Drawing.Point(21, 55);
+            this.buttonGetFN.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 12F);
+            this.buttonGetFN.Location = new System.Drawing.Point(15, 30);
+            this.buttonGetFN.Margin = new System.Windows.Forms.Padding(6);
             this.buttonGetFN.Name = "buttonGetFN";
-            this.buttonGetFN.Size = new System.Drawing.Size(150, 36);
+            this.buttonGetFN.Size = new System.Drawing.Size(128, 30);
             this.buttonGetFN.TabIndex = 2;
             this.buttonGetFN.Text = "获取文件名";
             this.buttonGetFN.UseVisualStyleBackColor = true;
             this.buttonGetFN.Click += new System.EventHandler(this.buttonGetFN_Click);
             // 
-            // buttonRenameFN
+            // groupBoxFN
             // 
-            this.buttonRenameFN.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonRenameFN.Location = new System.Drawing.Point(21, 116);
-            this.buttonRenameFN.Name = "buttonRenameFN";
-            this.buttonRenameFN.Size = new System.Drawing.Size(150, 36);
-            this.buttonRenameFN.TabIndex = 3;
-            this.buttonRenameFN.Text = "修改文件名";
-            this.buttonRenameFN.UseVisualStyleBackColor = true;
-            this.buttonRenameFN.Click += new System.EventHandler(this.buttonRenameFN_Click);
+            this.groupBoxFN.Controls.Add(this.buttonGetFN);
+            this.groupBoxFN.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBoxFN.Location = new System.Drawing.Point(12, 36);
+            this.groupBoxFN.Name = "groupBoxFN";
+            this.groupBoxFN.Size = new System.Drawing.Size(360, 212);
+            this.groupBoxFN.TabIndex = 4;
+            this.groupBoxFN.TabStop = false;
+            this.groupBoxFN.Text = "文件操作";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 561);
-            this.Controls.Add(this.buttonRenameFN);
-            this.Controls.Add(this.buttonGetFN);
             this.Controls.Add(this.statusStripMain);
             this.Controls.Add(this.menuStripMain);
+            this.Controls.Add(this.groupBoxFN);
             this.MainMenuStrip = this.menuStripMain;
             this.Name = "MainForm";
             this.Text = "Toolbox Collection";
@@ -206,6 +207,7 @@
             this.menuStripMain.PerformLayout();
             this.statusStripMain.ResumeLayout(false);
             this.statusStripMain.PerformLayout();
+            this.groupBoxFN.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,6 +231,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSpace1;
         private System.Windows.Forms.Timer timerMain;
         private System.Windows.Forms.Button buttonGetFN;
-        private System.Windows.Forms.Button buttonRenameFN;
+        private System.Windows.Forms.GroupBox groupBoxFN;
     }
 }

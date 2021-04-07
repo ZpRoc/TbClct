@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // DispSubForm
+            // DispForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
-            this.Name = "DispSubForm";
-            this.Text = "DispSubForm";
+            this.Name = "DispForm";
+            this.Text = "显示";
             this.ResumeLayout(false);
 
         }

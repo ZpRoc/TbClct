@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
             this.Name = "InputForm";
-            this.Text = "InputSubForm";
+            this.Text = "输入";
             this.ResumeLayout(false);
 
         }

@@ -34,25 +34,25 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonCancel.Location = new System.Drawing.Point(267, 308);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(8);
+            this.buttonCancel.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 12F);
+            this.buttonCancel.Location = new System.Drawing.Point(287, 318);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(100, 36);
+            this.buttonCancel.Size = new System.Drawing.Size(80, 30);
             this.buttonCancel.TabIndex = 108;
-            this.buttonCancel.Text = "取 消";
+            this.buttonCancel.Text = "取消";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonOK
             // 
-            this.buttonOK.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonOK.Location = new System.Drawing.Point(151, 308);
-            this.buttonOK.Margin = new System.Windows.Forms.Padding(8);
+            this.buttonOK.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 12F);
+            this.buttonOK.Location = new System.Drawing.Point(191, 318);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(100, 36);
+            this.buttonOK.Size = new System.Drawing.Size(80, 30);
             this.buttonOK.TabIndex = 107;
-            this.buttonOK.Text = "确 定";
+            this.buttonOK.Text = "确定";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 

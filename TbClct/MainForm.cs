@@ -85,36 +85,6 @@ namespace TbClct
             }
         }
 
-        /// <summary>
-        /// 修改文件名
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void buttonRenameFN_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // 过期保护
-                if (m_isOutOfDate)
-                {
-                    MessageBox.Show("无权限，请先激活软件！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // 弹出子窗口
-                Tools.RenameFN.SubForm subForm = new Tools.RenameFN.SubForm();
-                if (subForm.ShowDialog(this) == DialogResult.OK)
-                {
-                    
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-
         // ----------------------------- menuStripMain Events ----------------------------- //
         // -------------------------------------------------------------------------------- //
         // -------------------------------------------------------------------------------- //
