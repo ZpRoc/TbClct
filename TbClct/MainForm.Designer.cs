@@ -44,7 +44,8 @@
             this.toolStripStatusLabelSpace1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBarMain = new System.Windows.Forms.ToolStripProgressBar();
             this.timerMain = new System.Windows.Forms.Timer(this.components);
-            this.buttonGetFilenames = new System.Windows.Forms.Button();
+            this.buttonGetFN = new System.Windows.Forms.Button();
+            this.buttonRenameFN = new System.Windows.Forms.Button();
             this.menuStripMain.SuspendLayout();
             this.statusStripMain.SuspendLayout();
             this.SuspendLayout();
@@ -167,23 +168,35 @@
             this.timerMain.Enabled = true;
             this.timerMain.Tick += new System.EventHandler(this.timerMain_Tick);
             // 
-            // buttonGetFilenames
+            // buttonGetFN
             // 
-            this.buttonGetFilenames.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonGetFilenames.Location = new System.Drawing.Point(21, 55);
-            this.buttonGetFilenames.Name = "buttonGetFilenames";
-            this.buttonGetFilenames.Size = new System.Drawing.Size(150, 36);
-            this.buttonGetFilenames.TabIndex = 2;
-            this.buttonGetFilenames.Text = "获取文件名";
-            this.buttonGetFilenames.UseVisualStyleBackColor = true;
-            this.buttonGetFilenames.Click += new System.EventHandler(this.buttonGetFilenames_Click);
+            this.buttonGetFN.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonGetFN.Location = new System.Drawing.Point(21, 55);
+            this.buttonGetFN.Name = "buttonGetFN";
+            this.buttonGetFN.Size = new System.Drawing.Size(150, 36);
+            this.buttonGetFN.TabIndex = 2;
+            this.buttonGetFN.Text = "获取文件名";
+            this.buttonGetFN.UseVisualStyleBackColor = true;
+            this.buttonGetFN.Click += new System.EventHandler(this.buttonGetFN_Click);
+            // 
+            // buttonRenameFN
+            // 
+            this.buttonRenameFN.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonRenameFN.Location = new System.Drawing.Point(21, 116);
+            this.buttonRenameFN.Name = "buttonRenameFN";
+            this.buttonRenameFN.Size = new System.Drawing.Size(150, 36);
+            this.buttonRenameFN.TabIndex = 3;
+            this.buttonRenameFN.Text = "修改文件名";
+            this.buttonRenameFN.UseVisualStyleBackColor = true;
+            this.buttonRenameFN.Click += new System.EventHandler(this.buttonRenameFN_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 561);
-            this.Controls.Add(this.buttonGetFilenames);
+            this.Controls.Add(this.buttonRenameFN);
+            this.Controls.Add(this.buttonGetFN);
             this.Controls.Add(this.statusStripMain);
             this.Controls.Add(this.menuStripMain);
             this.MainMenuStrip = this.menuStripMain;
@@ -215,6 +228,7 @@
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBarMain;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSpace1;
         private System.Windows.Forms.Timer timerMain;
-        private System.Windows.Forms.Button buttonGetFilenames;
+        private System.Windows.Forms.Button buttonGetFN;
+        private System.Windows.Forms.Button buttonRenameFN;
     }
 }
