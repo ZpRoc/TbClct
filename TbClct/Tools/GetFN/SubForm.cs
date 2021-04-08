@@ -53,7 +53,7 @@ namespace TbClct.Tools.GetFN
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -86,7 +86,7 @@ namespace TbClct.Tools.GetFN
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -99,10 +99,10 @@ namespace TbClct.Tools.GetFN
         {
             try
             {
-                // 禁止 文件后缀选择事件
+                // 禁止 文件扩展名选择事件
                 checkedListBoxSuffix.SelectedIndexChanged -= new System.EventHandler(checkedListBoxSuffix_SelectedIndexChanged);
 
-                // 设置 文件后缀 选中项目
+                // 设置 文件扩展名 选中项目
                 if (checkBoxSelectAll.Checked)
                 {
                     for (int i = 0; i < checkedListBoxSuffix.Items.Count; i++)
@@ -118,18 +118,18 @@ namespace TbClct.Tools.GetFN
                     }
                 }
 
-                // 启动并调用 文件后缀选择事件
+                // 启动并调用 文件扩展名选择事件
                 checkedListBoxSuffix.SelectedIndexChanged += new System.EventHandler(checkedListBoxSuffix_SelectedIndexChanged);
                 checkedListBoxSuffix_SelectedIndexChanged(null, null);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         /// <summary>
-        /// 文件后缀选择
+        /// 文件扩展名选择
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -142,7 +142,7 @@ namespace TbClct.Tools.GetFN
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -160,7 +160,7 @@ namespace TbClct.Tools.GetFN
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -178,7 +178,7 @@ namespace TbClct.Tools.GetFN
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -196,7 +196,7 @@ namespace TbClct.Tools.GetFN
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -209,30 +209,21 @@ namespace TbClct.Tools.GetFN
         {
             try
             {
-
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    m_getFN.WriteTxt(saveFileDialog.FileName, textBoxFN.Text, out string err);
+                    if (!string.IsNullOrWhiteSpace(err))
+                    {
+                        MessageBox.Show(err);
+                        return;
+                    }
+                    MessageBox.Show("导出完成！", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        /// <summary>
-        /// 测试 按钮
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void buttonTmp_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
     }
 }

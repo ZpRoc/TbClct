@@ -9,12 +9,15 @@ namespace TbClct.Tools.GetFN
 {
     public class GetFN
     {
+        // 文件夹路径
         public string m_url = string.Empty;
 
+        // 输出格式 和 输出排序，连接到界面的 ComboBox 控件
         public readonly string[] m_FORMAT = new string[]{"文件名", "完整路径"};
         public readonly string[] m_SORTED = new string[]{"名称升序", "名称降序", "时间升序", "时间降序", "类型升序", "类型降序"};
 
-        public List<string> m_extList        = new List<string>();     // 后缀
+        // 文件信息存储
+        public List<string> m_extList        = new List<string>();     // 扩展名
         public List<FileInfo> m_fileInfoList = new List<FileInfo>();   // 文件信息
 
         public GetFN()
@@ -29,8 +32,8 @@ namespace TbClct.Tools.GetFN
         /// <summary>
         /// 获取 [扩展名 / 文件信息] 的 List
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="err"></param>
+        /// <param name="url">文件夹完整路径</param>
+        /// <param name="err">out 错误信息</param>
         public void Update(string url, out string err)
         {
             // Initialization
@@ -69,11 +72,11 @@ namespace TbClct.Tools.GetFN
         /// <summary>
         /// 获取输出字符串
         /// </summary>
-        /// <param name="extClct"></param>
-        /// <param name="format"></param>
-        /// <param name="sorted"></param>
-        /// <param name="isIndex"></param>
-        /// <returns></returns>
+        /// <param name="extClct">扩展名 ComboBox.Items </param>
+        /// <param name="format">输出格式</param>
+        /// <param name="sorted">输出排序</param>
+        /// <param name="isIndex">是否添加编号</param>
+        /// <returns>格式化输出，逐文件名输出</returns>
         public string Output(System.Windows.Forms.CheckedListBox.CheckedItemCollection extClct, string format, string sorted, bool isIndex)
         {
             // Initialization
@@ -98,29 +101,29 @@ namespace TbClct.Tools.GetFN
             }
 
             // Sorted fileInfoList
-            if (format == m_SORTED[0])          // "名称升序"
+            if (sorted == m_SORTED[0])          // "名称升序"
             {
-                
+                fileInfoList.Sort((x, y) => x.Name.CompareTo(y.Name));
             }
-            else if (format == m_SORTED[1])     // "名称降序"
+            else if (sorted == m_SORTED[1])     // "名称降序"
             {
-                
+                fileInfoList.Sort((x, y) => -x.Name.CompareTo(y.Name));
             }
-            else if (format == m_SORTED[2])     // "时间升序"
+            else if (sorted == m_SORTED[2])     // "时间升序"
             {
-                
+                fileInfoList.Sort((x, y) => x.LastWriteTime.CompareTo(y.LastWriteTime));
             }
-            else if (format == m_SORTED[3])     // "时间降序"
+            else if (sorted == m_SORTED[3])     // "时间降序"
             {
-                
+                fileInfoList.Sort((x, y) => -x.LastWriteTime.CompareTo(y.LastWriteTime));
             }
-            else if (format == m_SORTED[4])     // "类型升序"
+            else if (sorted == m_SORTED[4])     // "类型升序"
             {
-                
+                fileInfoList.Sort((x, y) => x.Extension.CompareTo(y.Extension));
             }
-            else if (format == m_SORTED[5])     // "类型降序"
+            else if (sorted == m_SORTED[5])     // "类型降序"
             {
-                
+                fileInfoList.Sort((x, y) => -x.Extension.CompareTo(y.Extension));
             }
 
             // Format str
@@ -136,7 +139,39 @@ namespace TbClct.Tools.GetFN
                 }
             }
 
-            return str;
+            return str.TrimEnd(System.Environment.NewLine.ToCharArray());
         }
+
+        /// <summary>
+        /// 写入文本文件
+        /// </summary>
+        /// <param name="url">写入路径</param>
+        /// <param name="str">写入内容</param>
+        /// <param name="err">out 错误信息</param>
+        public void WriteTxt(string url, string str, out string err)
+        {
+            // 初始化
+            err = string.Empty;
+
+            // 创建并写入
+            FileStream fs   = new FileStream(url, FileMode.Create);
+            StreamWriter sw = new StreamWriter(fs);
+            try
+            {
+                sw.Write(str);
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+            }
+            finally
+            {
+                sw.Flush();
+                sw.Close();
+                fs.Close();
+            }
+        }
+
+
     }
 }

@@ -39,6 +39,7 @@
             this.buttonExport = new System.Windows.Forms.Button();
             this.checkBoxSelectAll = new System.Windows.Forms.CheckBox();
             this.checkBoxIsIndex = new System.Windows.Forms.CheckBox();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,6 +180,11 @@
             this.checkBoxIsIndex.UseVisualStyleBackColor = true;
             this.checkBoxIsIndex.CheckedChanged += new System.EventHandler(this.checkBoxIsIndex_CheckedChanged);
             // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "文本文件 | *.txt";
+            this.saveFileDialog.Title = "导出文件信息";
+            // 
             // SubForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -205,5 +211,6 @@
         private System.Windows.Forms.Button buttonExport;
         private System.Windows.Forms.CheckBox checkBoxSelectAll;
         private System.Windows.Forms.CheckBox checkBoxIsIndex;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
