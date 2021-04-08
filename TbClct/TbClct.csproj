@@ -165,10 +165,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ico\about.png" />
+    <None Include="ico\config.png" />
+    <None Include="ico\data.png" />
+    <None Include="ico\configs.png" />
     <Content Include="ico\exit.png" />
+    <None Include="ico\file.png" />
+    <None Include="ico\filename.png" />
     <Content Include="ico\help.png" />
+    <None Include="ico\image.png" />
     <Content Include="ico\key.png" />
     <Content Include="ico\locked.png" />
+    <None Include="ico\plot.png" />
     <Content Include="ico\unlocked.png" />
     <Content Include="ico\ZpRoc.ico" />
   </ItemGroup>

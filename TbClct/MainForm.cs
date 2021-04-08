@@ -52,7 +52,7 @@ namespace TbClct
             }
         }
 
-        // ------------------------------------ Tools ------------------------------------- //
+        // ----------------------------- FileOpsTools 文件操作 ----------------------------- //
         // -------------------------------------------------------------------------------- //
         // -------------------------------------------------------------------------------- //
 
@@ -61,7 +61,7 @@ namespace TbClct
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonGetFN_Click(object sender, EventArgs e)
+        private void toolStripMenuItemGetFN_Click(object sender, EventArgs e)
         {
             try
             {
@@ -83,6 +83,105 @@ namespace TbClct
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        } 
+
+        // ----------------------------- DataOpsTools 数据操作 ----------------------------- //
+        // -------------------------------------------------------------------------------- //
+        // -------------------------------------------------------------------------------- //
+
+        /// <summary>
+        /// 散点绘制拟合
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripMenuItemPlotFit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 过期保护
+                if (m_isOutOfDate)
+                {
+                    MessageBox.Show("无权限，请先激活软件！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // 弹出子窗口
+                //Tools.GetFN.SubForm subForm = new Tools.GetFN.SubForm();
+                //if (subForm.ShowDialog(this) == DialogResult.OK)
+                //{
+                    
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // ----------------------------- ImgOpsTools 图像处理 ------------------------------ //
+        // -------------------------------------------------------------------------------- //
+        // -------------------------------------------------------------------------------- //
+
+        /// <summary>
+        /// 图像基础处理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripMenuItemImgBasis_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 过期保护
+                if (m_isOutOfDate)
+                {
+                    MessageBox.Show("无权限，请先激活软件！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // 弹出子窗口
+                //Tools.GetFN.SubForm subForm = new Tools.GetFN.SubForm();
+                //if (subForm.ShowDialog(this) == DialogResult.OK)
+                //{
+                    
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // -------------------------------- OtherTools 其他 -------------------------------- //
+        // -------------------------------------------------------------------------------- //
+        // -------------------------------------------------------------------------------- //
+
+        /// <summary>
+        /// SPM (Bruker)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripMenuItemSpmBruker_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 过期保护
+                if (m_isOutOfDate)
+                {
+                    MessageBox.Show("无权限，请先激活软件！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // 弹出子窗口
+                //Tools.GetFN.SubForm subForm = new Tools.GetFN.SubForm();
+                //if (subForm.ShowDialog(this) == DialogResult.OK)
+                //{
+                    
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // ----------------------------- menuStripMain Events ----------------------------- //
@@ -99,6 +198,23 @@ namespace TbClct
             try
             {
                 this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// 菜单栏 系统设置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripMenuItemSysCfg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
             }
             catch (Exception ex)
             {
@@ -164,5 +280,53 @@ namespace TbClct
         // ---------------------------- statusStripMain Events ---------------------------- //
         // -------------------------------------------------------------------------------- //
         // -------------------------------------------------------------------------------- //
+
+
+
+        // -------------------------------- button Events --------------------------------- //
+        // -------------------------------------------------------------------------------- //
+        // -------------------------------------------------------------------------------- //
+
+        /// <summary>
+        /// 获取文件名
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonGetFN_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItemGetFN_Click(null, null);
+        }
+
+        /// <summary>
+        /// 散点绘制拟合
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonPlotFit_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItemPlotFit_Click(null, null);
+        }
+
+        /// <summary>
+        /// 图像基础处理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonImgBasis_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItemImgBasis_Click(null, null);
+        }
+
+        /// <summary>
+        /// SPM (Bruker)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonSpmBruker_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItemSpmBruker_Click(null, null);
+        }
+
+        
     }
 }

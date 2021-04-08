@@ -16,7 +16,7 @@ namespace TbClct
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tools.GetFN.SubForm());
+            Application.Run(new MainForm());
         }
     }
 }
