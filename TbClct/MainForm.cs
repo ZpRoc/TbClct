@@ -123,7 +123,7 @@ namespace TbClct
         // -------------------------------------------------------------------------------- //
 
         /// <summary>
-        /// 图像基础处理
+        /// 图像处理基础
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -308,7 +308,7 @@ namespace TbClct
         }
 
         /// <summary>
-        /// 图像基础处理
+        /// 图像处理基础
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

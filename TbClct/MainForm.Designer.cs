@@ -32,12 +32,22 @@
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemMainFile = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparatorFile1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemMainTools = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemFileOps = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemGetFN = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemDataOps = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemPlotFit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemImgOps = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemImgBasis = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemOther = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemSpmBruker = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemMainConfig = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemSysCfg = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemMainActivate = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemMainHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelSpace1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -51,16 +61,6 @@
             this.groupBoxImgOps = new System.Windows.Forms.GroupBox();
             this.buttonImgBasis = new System.Windows.Forms.Button();
             this.groupBoxOther = new System.Windows.Forms.GroupBox();
-            this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemFileOps = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemGetFN = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemDataOps = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemPlotFit = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemImgOps = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemImgBasis = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemSysCfg = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             this.statusStripMain.SuspendLayout();
             this.groupBoxFileOps.SuspendLayout();
@@ -98,6 +98,14 @@
             this.toolStripSeparatorFile1.Name = "toolStripSeparatorFile1";
             this.toolStripSeparatorFile1.Size = new System.Drawing.Size(113, 6);
             // 
+            // toolStripMenuItemExit
+            // 
+            this.toolStripMenuItemExit.Image = global::TbClct.Properties.Resources.exit;
+            this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
+            this.toolStripMenuItemExit.Size = new System.Drawing.Size(116, 26);
+            this.toolStripMenuItemExit.Text = "退出";
+            this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
+            // 
             // toolStripMenuItemMainTools
             // 
             this.toolStripMenuItemMainTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -108,6 +116,56 @@
             this.toolStripMenuItemMainTools.Name = "toolStripMenuItemMainTools";
             this.toolStripMenuItemMainTools.Size = new System.Drawing.Size(58, 25);
             this.toolStripMenuItemMainTools.Text = "工具";
+            // 
+            // toolStripMenuItemFileOps
+            // 
+            this.toolStripMenuItemFileOps.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemGetFN});
+            this.toolStripMenuItemFileOps.Image = global::TbClct.Properties.Resources.file;
+            this.toolStripMenuItemFileOps.Name = "toolStripMenuItemFileOps";
+            this.toolStripMenuItemFileOps.Size = new System.Drawing.Size(152, 26);
+            this.toolStripMenuItemFileOps.Text = "文件操作";
+            // 
+            // toolStripMenuItemGetFN
+            // 
+            this.toolStripMenuItemGetFN.Image = global::TbClct.Properties.Resources.filename;
+            this.toolStripMenuItemGetFN.Name = "toolStripMenuItemGetFN";
+            this.toolStripMenuItemGetFN.Size = new System.Drawing.Size(170, 26);
+            this.toolStripMenuItemGetFN.Text = "获取文件名";
+            this.toolStripMenuItemGetFN.Click += new System.EventHandler(this.toolStripMenuItemGetFN_Click);
+            // 
+            // toolStripMenuItemDataOps
+            // 
+            this.toolStripMenuItemDataOps.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemPlotFit});
+            this.toolStripMenuItemDataOps.Image = global::TbClct.Properties.Resources.data;
+            this.toolStripMenuItemDataOps.Name = "toolStripMenuItemDataOps";
+            this.toolStripMenuItemDataOps.Size = new System.Drawing.Size(152, 26);
+            this.toolStripMenuItemDataOps.Text = "数据操作";
+            // 
+            // toolStripMenuItemPlotFit
+            // 
+            this.toolStripMenuItemPlotFit.Image = global::TbClct.Properties.Resources.plot;
+            this.toolStripMenuItemPlotFit.Name = "toolStripMenuItemPlotFit";
+            this.toolStripMenuItemPlotFit.Size = new System.Drawing.Size(188, 26);
+            this.toolStripMenuItemPlotFit.Text = "散点绘制拟合";
+            this.toolStripMenuItemPlotFit.Click += new System.EventHandler(this.toolStripMenuItemPlotFit_Click);
+            // 
+            // toolStripMenuItemImgOps
+            // 
+            this.toolStripMenuItemImgOps.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemImgBasis});
+            this.toolStripMenuItemImgOps.Image = global::TbClct.Properties.Resources.image;
+            this.toolStripMenuItemImgOps.Name = "toolStripMenuItemImgOps";
+            this.toolStripMenuItemImgOps.Size = new System.Drawing.Size(152, 26);
+            this.toolStripMenuItemImgOps.Text = "图像处理";
+            // 
+            // toolStripMenuItemImgBasis
+            // 
+            this.toolStripMenuItemImgBasis.Name = "toolStripMenuItemImgBasis";
+            this.toolStripMenuItemImgBasis.Size = new System.Drawing.Size(188, 26);
+            this.toolStripMenuItemImgBasis.Text = "图像基础处理";
+            this.toolStripMenuItemImgBasis.Click += new System.EventHandler(this.toolStripMenuItemImgBasis_Click);
             // 
             // toolStripMenuItemOther
             // 
@@ -132,6 +190,14 @@
             this.toolStripMenuItemMainConfig.Size = new System.Drawing.Size(58, 25);
             this.toolStripMenuItemMainConfig.Text = "设置";
             // 
+            // toolStripMenuItemSysCfg
+            // 
+            this.toolStripMenuItemSysCfg.Image = global::TbClct.Properties.Resources.config;
+            this.toolStripMenuItemSysCfg.Name = "toolStripMenuItemSysCfg";
+            this.toolStripMenuItemSysCfg.Size = new System.Drawing.Size(152, 26);
+            this.toolStripMenuItemSysCfg.Text = "系统设置";
+            this.toolStripMenuItemSysCfg.Click += new System.EventHandler(this.toolStripMenuItemSysCfg_Click);
+            // 
             // toolStripMenuItemMainActivate
             // 
             this.toolStripMenuItemMainActivate.Name = "toolStripMenuItemMainActivate";
@@ -146,6 +212,22 @@
             this.toolStripMenuItemMainHelp.Name = "toolStripMenuItemMainHelp";
             this.toolStripMenuItemMainHelp.Size = new System.Drawing.Size(58, 25);
             this.toolStripMenuItemMainHelp.Text = "帮助";
+            // 
+            // toolStripMenuItemHelp
+            // 
+            this.toolStripMenuItemHelp.Image = global::TbClct.Properties.Resources.help;
+            this.toolStripMenuItemHelp.Name = "toolStripMenuItemHelp";
+            this.toolStripMenuItemHelp.Size = new System.Drawing.Size(152, 26);
+            this.toolStripMenuItemHelp.Text = "查看帮助";
+            this.toolStripMenuItemHelp.Click += new System.EventHandler(this.toolStripMenuItemHelp_Click);
+            // 
+            // toolStripMenuItemAbout
+            // 
+            this.toolStripMenuItemAbout.Image = global::TbClct.Properties.Resources.about;
+            this.toolStripMenuItemAbout.Name = "toolStripMenuItemAbout";
+            this.toolStripMenuItemAbout.Size = new System.Drawing.Size(152, 26);
+            this.toolStripMenuItemAbout.Text = "关于";
+            this.toolStripMenuItemAbout.Click += new System.EventHandler(this.toolStripMenuItemAbout_Click);
             // 
             // statusStripMain
             // 
@@ -262,7 +344,7 @@
             this.buttonImgBasis.Name = "buttonImgBasis";
             this.buttonImgBasis.Size = new System.Drawing.Size(150, 30);
             this.buttonImgBasis.TabIndex = 31;
-            this.buttonImgBasis.Text = "图像基础处理";
+            this.buttonImgBasis.Text = "图像处理基础";
             this.buttonImgBasis.UseVisualStyleBackColor = true;
             this.buttonImgBasis.Click += new System.EventHandler(this.buttonImgBasis_Click);
             // 
@@ -277,88 +359,6 @@
             this.groupBoxOther.TabStop = false;
             this.groupBoxOther.Text = "其它";
             // 
-            // toolStripMenuItemExit
-            // 
-            this.toolStripMenuItemExit.Image = global::TbClct.Properties.Resources.exit;
-            this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
-            this.toolStripMenuItemExit.Size = new System.Drawing.Size(116, 26);
-            this.toolStripMenuItemExit.Text = "退出";
-            this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
-            // 
-            // toolStripMenuItemFileOps
-            // 
-            this.toolStripMenuItemFileOps.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemGetFN});
-            this.toolStripMenuItemFileOps.Image = global::TbClct.Properties.Resources.file;
-            this.toolStripMenuItemFileOps.Name = "toolStripMenuItemFileOps";
-            this.toolStripMenuItemFileOps.Size = new System.Drawing.Size(152, 26);
-            this.toolStripMenuItemFileOps.Text = "文件操作";
-            // 
-            // toolStripMenuItemGetFN
-            // 
-            this.toolStripMenuItemGetFN.Image = global::TbClct.Properties.Resources.filename;
-            this.toolStripMenuItemGetFN.Name = "toolStripMenuItemGetFN";
-            this.toolStripMenuItemGetFN.Size = new System.Drawing.Size(170, 26);
-            this.toolStripMenuItemGetFN.Text = "获取文件名";
-            this.toolStripMenuItemGetFN.Click += new System.EventHandler(this.toolStripMenuItemGetFN_Click);
-            // 
-            // toolStripMenuItemDataOps
-            // 
-            this.toolStripMenuItemDataOps.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemPlotFit});
-            this.toolStripMenuItemDataOps.Image = global::TbClct.Properties.Resources.data;
-            this.toolStripMenuItemDataOps.Name = "toolStripMenuItemDataOps";
-            this.toolStripMenuItemDataOps.Size = new System.Drawing.Size(152, 26);
-            this.toolStripMenuItemDataOps.Text = "数据操作";
-            // 
-            // toolStripMenuItemPlotFit
-            // 
-            this.toolStripMenuItemPlotFit.Image = global::TbClct.Properties.Resources.plot;
-            this.toolStripMenuItemPlotFit.Name = "toolStripMenuItemPlotFit";
-            this.toolStripMenuItemPlotFit.Size = new System.Drawing.Size(188, 26);
-            this.toolStripMenuItemPlotFit.Text = "散点绘制拟合";
-            this.toolStripMenuItemPlotFit.Click += new System.EventHandler(this.toolStripMenuItemPlotFit_Click);
-            // 
-            // toolStripMenuItemImgOps
-            // 
-            this.toolStripMenuItemImgOps.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemImgBasis});
-            this.toolStripMenuItemImgOps.Image = global::TbClct.Properties.Resources.image;
-            this.toolStripMenuItemImgOps.Name = "toolStripMenuItemImgOps";
-            this.toolStripMenuItemImgOps.Size = new System.Drawing.Size(152, 26);
-            this.toolStripMenuItemImgOps.Text = "图像处理";
-            // 
-            // toolStripMenuItemImgBasis
-            // 
-            this.toolStripMenuItemImgBasis.Name = "toolStripMenuItemImgBasis";
-            this.toolStripMenuItemImgBasis.Size = new System.Drawing.Size(188, 26);
-            this.toolStripMenuItemImgBasis.Text = "图像基础处理";
-            this.toolStripMenuItemImgBasis.Click += new System.EventHandler(this.toolStripMenuItemImgBasis_Click);
-            // 
-            // toolStripMenuItemSysCfg
-            // 
-            this.toolStripMenuItemSysCfg.Image = global::TbClct.Properties.Resources.config;
-            this.toolStripMenuItemSysCfg.Name = "toolStripMenuItemSysCfg";
-            this.toolStripMenuItemSysCfg.Size = new System.Drawing.Size(180, 26);
-            this.toolStripMenuItemSysCfg.Text = "系统设置";
-            this.toolStripMenuItemSysCfg.Click += new System.EventHandler(this.toolStripMenuItemSysCfg_Click);
-            // 
-            // toolStripMenuItemHelp
-            // 
-            this.toolStripMenuItemHelp.Image = global::TbClct.Properties.Resources.help;
-            this.toolStripMenuItemHelp.Name = "toolStripMenuItemHelp";
-            this.toolStripMenuItemHelp.Size = new System.Drawing.Size(152, 26);
-            this.toolStripMenuItemHelp.Text = "查看帮助";
-            this.toolStripMenuItemHelp.Click += new System.EventHandler(this.toolStripMenuItemHelp_Click);
-            // 
-            // toolStripMenuItemAbout
-            // 
-            this.toolStripMenuItemAbout.Image = global::TbClct.Properties.Resources.about;
-            this.toolStripMenuItemAbout.Name = "toolStripMenuItemAbout";
-            this.toolStripMenuItemAbout.Size = new System.Drawing.Size(152, 26);
-            this.toolStripMenuItemAbout.Text = "关于";
-            this.toolStripMenuItemAbout.Click += new System.EventHandler(this.toolStripMenuItemAbout_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -371,6 +371,8 @@
             this.Controls.Add(this.menuStripMain);
             this.Controls.Add(this.groupBoxFileOps);
             this.MainMenuStrip = this.menuStripMain;
+            this.MaximumSize = new System.Drawing.Size(375, 560);
+            this.MinimumSize = new System.Drawing.Size(375, 560);
             this.Name = "MainForm";
             this.Text = "Toolbox Collection";
             this.menuStripMain.ResumeLayout(false);

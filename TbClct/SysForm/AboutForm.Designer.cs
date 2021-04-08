@@ -184,10 +184,8 @@
             this.Controls.Add(this.groupBoxAbout);
             this.Controls.Add(this.labelTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(315, 650);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(280, 500);
+            this.MaximumSize = new System.Drawing.Size(290, 550);
+            this.MinimumSize = new System.Drawing.Size(290, 550);
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "关于";

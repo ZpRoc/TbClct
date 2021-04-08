@@ -100,7 +100,7 @@
             this.tabPageActivate.Location = new System.Drawing.Point(4, 30);
             this.tabPageActivate.Name = "tabPageActivate";
             this.tabPageActivate.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageActivate.Size = new System.Drawing.Size(402, 442);
+            this.tabPageActivate.Size = new System.Drawing.Size(402, 454);
             this.tabPageActivate.TabIndex = 2;
             this.tabPageActivate.Text = " 激活 ";
             this.tabPageActivate.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@
             this.textBoxActivate.Multiline = true;
             this.textBoxActivate.Name = "textBoxActivate";
             this.textBoxActivate.ReadOnly = true;
-            this.textBoxActivate.Size = new System.Drawing.Size(396, 436);
+            this.textBoxActivate.Size = new System.Drawing.Size(396, 448);
             this.textBoxActivate.TabIndex = 1;
             // 
             // HelpForm
@@ -124,6 +124,8 @@
             this.Controls.Add(this.tabControlHelp);
             this.Controls.Add(this.labelTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(448, 620);
+            this.MinimumSize = new System.Drawing.Size(448, 620);
             this.Name = "HelpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "帮助";

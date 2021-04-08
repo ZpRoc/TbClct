@@ -64,6 +64,7 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "OkCancelForm";
             this.Text = "OkCancelForm";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OkCancelForm_KeyDown);

@@ -40,7 +40,8 @@
     </Win32Resource>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Activation">
+    <Reference Include="Activation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Activation\Activation\Activation\bin\Debug\Activation.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -80,12 +81,6 @@
     <Compile Include="BaseForm\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SysForm\DispForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SysForm\DispForm.Designer.cs">
-      <DependentUpon>DispForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="SysForm\HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaseForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SysForm\DispForm.resx">
-      <DependentUpon>DispForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SysForm\HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>

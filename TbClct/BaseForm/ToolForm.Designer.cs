@@ -67,6 +67,7 @@
             this.ClientSize = new System.Drawing.Size(384, 361);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.panelMain);
+            this.MaximizeBox = false;
             this.Name = "ToolForm";
             this.Text = "ToolForm";
             this.Controls.SetChildIndex(this.panelMain, 0);
