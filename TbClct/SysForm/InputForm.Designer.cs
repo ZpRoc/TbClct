@@ -71,6 +71,7 @@
             this.Controls.Add(this.textBoxInput);
             this.Controls.Add(this.labelTitle);
             this.Name = "InputForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "输入";
             this.Controls.SetChildIndex(this.buttonOK, 0);
             this.Controls.SetChildIndex(this.buttonCancel, 0);

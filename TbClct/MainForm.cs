@@ -73,7 +73,7 @@ namespace TbClct
                 }
 
                 // 弹出子窗口
-                Tools.GetFN.SubForm subForm = new Tools.GetFN.SubForm();
+                Tools.File.GetFN.SubForm subForm = new Tools.File.GetFN.SubForm();
                 if (subForm.ShowDialog(this) == DialogResult.OK)
                 {
                     

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TbClct.Tools.GetFN
+namespace TbClct.Tools.File.GetFN
 {
     public partial class SubForm : BaseForm.ToolForm
     {
@@ -38,7 +38,7 @@ namespace TbClct.Tools.GetFN
         // -------------------------------------------------------------------------------- //
 
         /// <summary>
-        /// 选择文件夹
+        /// 选择文件夹，更新文件名
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TbClct.Tools.GetFN
+namespace TbClct.Tools.File.GetFN
 {
     public class GetFN
     {

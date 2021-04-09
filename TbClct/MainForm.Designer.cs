@@ -61,6 +61,7 @@
             this.groupBoxImgOps = new System.Windows.Forms.GroupBox();
             this.buttonImgBasis = new System.Windows.Forms.Button();
             this.groupBoxOther = new System.Windows.Forms.GroupBox();
+            this.buttonRenameFN = new System.Windows.Forms.Button();
             this.menuStripMain.SuspendLayout();
             this.statusStripMain.SuspendLayout();
             this.groupBoxFileOps.SuspendLayout();
@@ -281,6 +282,7 @@
             // 
             // groupBoxFileOps
             // 
+            this.groupBoxFileOps.Controls.Add(this.buttonRenameFN);
             this.groupBoxFileOps.Controls.Add(this.buttonGetFN);
             this.groupBoxFileOps.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBoxFileOps.Location = new System.Drawing.Point(12, 32);
@@ -359,6 +361,17 @@
             this.groupBoxOther.TabStop = false;
             this.groupBoxOther.Text = "其它";
             // 
+            // buttonRenameFN
+            // 
+            this.buttonRenameFN.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 12F);
+            this.buttonRenameFN.Location = new System.Drawing.Point(172, 29);
+            this.buttonRenameFN.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.buttonRenameFN.Name = "buttonRenameFN";
+            this.buttonRenameFN.Size = new System.Drawing.Size(150, 30);
+            this.buttonRenameFN.TabIndex = 12;
+            this.buttonRenameFN.Text = "修改文件名";
+            this.buttonRenameFN.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -422,5 +435,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemImgBasis;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSpmBruker;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSysCfg;
+        private System.Windows.Forms.Button buttonRenameFN;
     }
 }

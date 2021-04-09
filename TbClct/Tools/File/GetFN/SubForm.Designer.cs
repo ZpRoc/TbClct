@@ -1,4 +1,4 @@
-﻿namespace TbClct.Tools.GetFN
+﻿namespace TbClct.Tools.File.GetFN
 {
     partial class SubForm
     {
@@ -93,9 +93,9 @@
             // buttonUrl
             // 
             this.buttonUrl.Font = new System.Drawing.Font("YaHei Consolas Hybrid", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonUrl.Location = new System.Drawing.Point(507, 7);
+            this.buttonUrl.Location = new System.Drawing.Point(507, 8);
             this.buttonUrl.Name = "buttonUrl";
-            this.buttonUrl.Size = new System.Drawing.Size(45, 30);
+            this.buttonUrl.Size = new System.Drawing.Size(45, 29);
             this.buttonUrl.TabIndex = 112;
             this.buttonUrl.Text = "...";
             this.buttonUrl.UseVisualStyleBackColor = true;
